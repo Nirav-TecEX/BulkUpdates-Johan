@@ -1,0 +1,144 @@
+{
+    "info": {
+        "_postman_id": "e8ceda28-aeba-4c32-a9da-a2a9c61f5edb",
+        "name": "field_dependencies (Happy Soup)",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "20525646"
+    },
+    "item": [
+        {
+            "name": "request_dependencies",
+            "event": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [
+                            "let responseData = pm.response.json();\r",
+                            "\r",
+                            "console.log(responseData.jobId);\r",
+                            "pm.environment.set(\"jobId\", responseData.jobId);"
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ],
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Cookie",
+                        "value": "connect.sid=s:Hn5V1NN1sxX8D-gTc_MYIx-OF1Jfquot.HRMg0dNOzMQaAqN7dmh/OqAn/GJ5RxQX863/3cnTpUw",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"ids\":[{{fieldId}}]}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "https://happysoup.io/api/bulkusage",
+                    "protocol": "https",
+                    "host": [
+                        "happysoup",
+                        "io"
+                    ],
+                    "path": [
+                        "api",
+                        "bulkusage"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "get_dependencies",
+            "event": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [
+                            "if (pm.response.to.have.status(200) && pm.response.json().response.excel != undefined){\r",
+                            "    var output = pm.collectionVariables.get(\"output\");\r",
+                            "\r",
+                            "    var jsonData = pm.response.json();\r",
+                            "    output += jsonData.response.excel\r",
+                            "\r",
+                            "    pm.collectionVariables.set(\"output\", output);\r",
+                            "};\r",
+                            "\r",
+                            ""
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ],
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Cookie",
+                        "value": "connect.sid=s:Hn5V1NN1sxX8D-gTc_MYIx-OF1Jfquot.HRMg0dNOzMQaAqN7dmh/OqAn/GJ5RxQX863/3cnTpUw",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "https://happysoup.io/api/job/{{jobId}}",
+                    "protocol": "https",
+                    "host": [
+                        "happysoup",
+                        "io"
+                    ],
+                    "path": [
+                        "api",
+                        "job",
+                        "{{jobId}}"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ],
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "output",
+            "value": ""
+        }
+    ]
+}
