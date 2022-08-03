@@ -1,0 +1,124 @@
+2022-08-03 16:05:19.323212
+newman
+
+field_dependencies (Happy Soup)
+
+→ request_dependencies
+  POST https://happysoup.io/api/bulkusage [201 Created, 336B, 1558ms]
+  ┌
+  │ '00D0Q0000000fEGUAY.0051v00000ANTSLAA5:bulkusage-16595
+  │ 35522363'
+  └
+
+→ get_dependencies
+  GET https://happysoup.io/api/job/00D0Q0000000fEGUAY.0051v00000ANTSLAA5:bulkusage-1659535522363 [200 OK, 20.01kB, 921ms]
+  ┌
+  │ 'Name\tMetadata Type\tId\tUses\tMetadata Type\tId\r\n'
+  │  +
+  │   '"myobj Layout"\t"Layout"\t"00h0Y000002DlLIQA0"\t"AW
+  │ SResponse"\t"CustomField"\t"00N0Q0000027jnzUAA"\r\n' +
+  │   '"AWSPartInsertion"\t"ApexClass"\t"01p1v00000PnZAnAA
+  │ N"\t"AWS_P_P_Response"\t"CustomField"\t"00N0Q0000027ib
+  │ uUAA"\r\n' +
+  │   '"CSIQuoteCreation"\t"ApexClass"\t"01p1v00000Pjba0AA
+  │ B"\t"AWS_P_P_Response"\t"CustomField"\t"00N0Q0000027ib
+  │ uUAA"\r\n' +
+  │   '"CSICEDetails_Test"\t"ApexClass"\t"01p1v00000PjbZiA
+  │ AJ"\t"AWS_P_P_Response"\t"CustomField"\t"00N0Q0000027i
+  │ buUAA"\r\n' +
+  │   '"CSICEDetails"\t"ApexClass"\t"01p1v00000PjbZhAAJ"\t
+  │ "AWS_P_P_Response"\t"CustomField"\t"00N0Q0000027ibuUAA
+  │ "\r\n' +
+  │   '"AWSLineitemMockresponseinsert"\t"ApexClass"\t"01p0
+  │ Q000000hh31QAA"\t"AWS_P_P_Response"\t"CustomField"\t"0
+  │ 0N0Q0000027ibuUAA"\r\n' +
+  │   '"NCPAddPartsDetail_Test"\t"ApexClass"\t"01p0Q000000
+  │ hgWOQAY"\t"AWS_P_P_Response"\t"CustomField"\t"00N0Q000
+  │ 0027ibuUAA"\r\n' +
+  │   '"AWSLineItemLWCCtrl"\t"ApexClass"\t"01p0Q000000hgSg
+  │ QAI"\t"AWS_P_P_Response"\t"CustomField"\t"00N0Q0000027
+  │ ibuUAA"\r\n' +
+  │   '"NCPAddPartsDetails"\t"ApexClass"\t"01p0Q000000hgQ6
+  │ QAI"\t"AWS_P_P_Response"\t"CustomField"\t"00N0Q0000027
+  │ ibuUAA"\r\n' +
+  │   '"Shipment Order Quote Layout"\t"Layout"\t"00h1v0000
+  │ 05WNEOAA4"\t"AWS_P_P_Response"\t"CustomField"\t"00N0Q0
+  │ 000027ibuUAA"\r\n' +
+  │   '"TecEx Finance CE"\t"Layout"\t"00h1v000005SRGAAA4"\
+  │ t"AWS_P_P_Response"\t"CustomField"\t"00N0Q0000027ibuUA
+  │ A"\r\n' +
+  │   '"Shipment Order Layout New"\t"Layout"\t"00h1v000005
+  │ KYUMAA4"\t"AWS_P_P_Response"\t"CustomField"\t"00N0Q000
+  │ 0027ibuUAA"\r\n' +
+  │   '"TecEx Client CE"\t"Layout"\t"00h1v000004zS3OAAU"\t
+  │ "AWS_P_P_Response"\t"CustomField"\t"00N0Q0000027ibuUAA
+  │ "\r\n' +
+  │   '"TecEx BM"\t"Layout"\t"00h1v000004zS2kAAE"\t"AWS_P_
+  │ P_Response"\t"CustomField"\t"00N0Q0000027ibuUAA"\r\n' 
+  │ +
+  │   '"TecEx Finance"\t"Layout"\t"00h1v000004zS2fAAE"\t"A
+  │ WS_P_P_Response"\t"CustomField"\t"00N0Q0000027ibuUAA"\
+  │ r\n' +
+  │   '"TecEx AM"\t"Layout"\t"00h1v000004zS2aAAE"\t"AWS_P_
+  │ P_Response"\t"CustomField"\t"00N0Q0000027ibuUAA"\r\n' 
+  │ +
+  │   '"TecEx ICE"\t"Layout"\t"00h1v000004zS2GAAU"\t"AWS_P
+  │ _P_Response"\t"CustomField"\t"00N0Q0000027ibuUAA"\r\n'
+  │  +
+  │   '"TecEx Client"\t"Layout"\t"00h1v000004zRzWAAU"\t"AW
+  │ S_P_P_Response"\t"CustomField"\t"00N0Q0000027ibuUAA"\r
+  │ \n' +
+  │   '"TecEx Lightning Supplier Layout"\t"Layout"\t"00h1v
+  │ 000004vWZjAAM"\t"AWS_P_P_Response"\t"CustomField"\t"00
+  │ N0Q0000027ibuUAA"\r\n' +
+  │   '"Operations"\t"Layout"\t"00h1v000004vTl8AAE"\t"AWS_
+  │ P_P_Response"\t"CustomField"\t"00N0Q0000027ibuUAA"\r\n
+  │ ' +
+  │   '"TecEx Supplier Layout"\t"Layout"\t"00h0Y000005N6jI
+  │ QAS"\t"AWS_P_P_Response"\t"CustomField"\t"00N0Q0000027
+  │ ibuUAA"\r\n' +
+  │   '"Inactive Lane Layout"\t"Layout"\t"00h0Y0000048VczQ
+  │ AE"\t"AWS_P_P_Response"\t"CustomField"\t"00N0Q0000027i
+  │ buUAA"\r\n' +
+  │   '"TecEx Portal Layout"\t"Layout"\t"00h0Y000002D8PAQA
+  │ 0"\t"AWS_P_P_Response"\t"CustomField"\t"00N0Q0000027ib
+  │ uUAA"\r\n' +
+  │   '"TecEx Portal  QuoteLayout"\t"Layout"\t"00h0Y000002
+  │ D8P9QAK"\t"AWS_P_P_Response"\t"CustomField"\t"00N0Q000
+  │ 0027ibuUAA"\r\n' +
+  │   '"Shipment Quote Layout (Old)"\t"Layout"\t"00h0Y0000
+  │ 02D8P8QAK"\t"AWS_P_P_Response"\t"CustomField"\t"00N0Q0
+  │ 000027ibuUAA"\r\n' +
+  │   '"Shipment Order Layout"\t"Layout"\t"00h0Y000002D8Oy
+  │ QAK"\t"AWS_P_P_Response"\t"CustomField"\t"00N0Q0000027
+  │ ibuUAA"\r\n' +
+  │   '"MedCom Shipment Order Layout"\t"Layout"\t"00h0Q000
+  │ 000W4rvQAC"\t"AWS_P_P_Response"\t"CustomField"\t"00N0Q
+  │ 0000027ibuUAA"\r\n' +
+  │   '"MedCom Shipment Order Quote Layout"\t"Layout"\t"00
+  │ h0Q000000W3ocQAC"\t"AWS_P_P_Response"\t"CustomField"\t
+  │ "00N0Q0000027ibuUAA"\r\n' +
+  │   '"NL Product Buyer Layout"\t"Layout"\t"00h0Q000000VV
+  │ deQAG"\t"BO_Type"\t"CustomField"\t"00N0Q0000027stpUAA"
+  │ \r\n'
+  └
+
+┌─────────────────────────┬──────────────────────┬─────────────────────┐
+│                         │             executed │              failed │
+├─────────────────────────┼──────────────────────┼─────────────────────┤
+│              iterations │                    1 │                   0 │
+├─────────────────────────┼──────────────────────┼─────────────────────┤
+│                requests │                    2 │                   0 │
+├─────────────────────────┼──────────────────────┼─────────────────────┤
+│            test-scripts │                    4 │                   0 │
+├─────────────────────────┼──────────────────────┼─────────────────────┤
+│      prerequest-scripts │                    2 │                   0 │
+├─────────────────────────┼──────────────────────┼─────────────────────┤
+│              assertions │                    0 │                   0 │
+├─────────────────────────┴──────────────────────┴─────────────────────┤
+│ total run duration: 7.6s                                             │
+├──────────────────────────────────────────────────────────────────────┤
+│ total data received: 19.82kB (approx)                                │
+├──────────────────────────────────────────────────────────────────────┤
+│ average response time: 1239ms [min: 921ms, max: 1558ms, s.d.: 318ms] │
+└──────────────────────────────────────────────────────────────────────┘

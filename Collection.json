@@ -27,13 +27,13 @@
                 "header": [
                     {
                         "key": "Cookie",
-                        "value": "connect.sid=s:Hn5V1NN1sxX8D-gTc_MYIx-OF1Jfquot.HRMg0dNOzMQaAqN7dmh/OqAn/GJ5RxQX863/3cnTpUw",
+                        "value": "connect.sid=s:NY36hpqf4ZXpbJ0JGXaJxAvkAU5Z67MR.YB7Q8AtCWlIU6jm68wIxiYHBLg3WQeZttsq39czT0D4",
                         "type": "text"
                     }
                 ],
                 "body": {
                     "mode": "raw",
-                    "raw": "OVERWRITE <- ids:[{{fieldId}}]",
+                    "raw": "{\"ids\":[\"00N0Q0000027ibuUAA\",\"00N0Q0000027jnzUAA\",\"00N0Q0000027stpUAA\",\"00N1v000100Sl5VlEAJ\"]}",
                     "options": {
                         "raw": {
                             "language": "json"
@@ -62,6 +62,7 @@
                     "listen": "test",
                     "script": {
                         "exec": [
+                            "setTimeout(function(){}, [5000]);\r",
                             "if (pm.response.to.have.status(200) && pm.response.json().response.excel != undefined){\r",
                             "    var output = pm.collectionVariables.get(\"output\");\r",
                             "\r",
@@ -71,6 +72,7 @@
                             "    pm.collectionVariables.set(\"output\", output);\r",
                             "};\r",
                             "\r",
+                            "console.log(output)\r",
                             ""
                         ],
                         "type": "text/javascript"
@@ -85,7 +87,7 @@
                 "header": [
                     {
                         "key": "Cookie",
-                        "value": "connect.sid=s:Hn5V1NN1sxX8D-gTc_MYIx-OF1Jfquot.HRMg0dNOzMQaAqN7dmh/OqAn/GJ5RxQX863/3cnTpUw",
+                        "value": "connect.sid=s:NY36hpqf4ZXpbJ0JGXaJxAvkAU5Z67MR.YB7Q8AtCWlIU6jm68wIxiYHBLg3WQeZttsq39czT0D4",
                         "type": "text"
                     }
                 ],
