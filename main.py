@@ -1,3 +1,9 @@
+"""
+This function allows the user to send an api to HappySoup.
+HappySoup then does a bulk call on SalesForce objects.
+This data can be used to checkout the objects in out org. 
+"""
+
 import subprocess
 import json
 import os
@@ -11,12 +17,11 @@ def output_to_excel(destination_path: str):
     data = read_csv(destination_path, "\t")
     # data.to_excel("output_file.xlsx")
     return data
-
 ##-------------------------------------------------------------------
 
 ##-------------------------------------------------------------------
-def parse_data(output_path: str, destination_path:str):
-    with open(output_path, 'r', encoding='utf-8') as f:
+def parse_data(newman_output_path: str, destination_path:str):
+    with open(newman_output_path, 'r', encoding='utf-8') as f:
         data_out = f.read()
     
     list_of_lines = data_out.split("get_dependencies")[1].split("┌")[1] \
@@ -79,7 +84,26 @@ def get_collection_json(ids: str, cookie: str):
 ##-------------------------------------------------------------------
 
 ##-------------------------------------------------------------------
-def main(ids: str, cookie: str):
+def main(ids: str, cookie: str) -> bytes:
+    """ Run this function to generate an excel with the data.
+        Takes a string of ids and a cookie (for now) and returns the
+        data it wrote to an excel (can ignore). The excel is located 
+        in the current working directory and is called 
+        "output_file.xlsx".
+
+        Call the function like:
+        
+            <snip>
+            
+            _ = main(ids, cookie)
+            
+            <snip>
+
+        param ids     :: note the string format below 
+            '"id_1", "id_2", "...", ...' 
+        param cookie  :: cookie string
+    """
+    
     cwd = os.getcwd()
     newman_output_path = os.path.join(cwd, "output.txt")
     destination_path = os.path.join(cwd, "destination.txt") 
