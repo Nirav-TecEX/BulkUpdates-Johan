@@ -190,6 +190,13 @@ def main(ids: str, cookie: str) -> bytes:
     return data
 ##-------------------------------------------------------------------
 
+##-------------------------------------------------------------------
+def get_bulk_dataframe(ids: str, cookie: str) -> bytes:
+    _ = main(ids, cookie)
+    return _
+##-------------------------------------------------------------------
+
+##-------------------------------------------------------------------
 if __name__=="__main__":
     # main('"00N0Q0000027ibuUAA","00N0Q0000027jnzUAA","00N0Q0000027stpUAA","00N1v000100Sl5VlEAJ"', "connect.sid=s:NY36hpqf4ZXpbJ0JGXaJxAvkAU5Z67MR.YB7Q8AtCWlIU6jm68wIxiYHBLg3WQeZttsq39czT0D4")
     _ = main(
